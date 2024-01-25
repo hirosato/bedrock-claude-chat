@@ -5,8 +5,8 @@ import { BedrockChatStack } from "../lib/bedrock-chat-stack";
 test("SnapshotTest", () => {
   const app = new cdk.App();
   const stack = new BedrockChatStack(app, "MyTestStack", {
-    bedrockRegion: "us-east-1",
-    bedrockEndpointUrl: "https://bedrock.us-east-1.amazonaws.com",
+    bedrockRegion: "us-west-2",
+    bedrockEndpointUrl: "https://bedrock.us-west-2.amazonaws.com",
   });
   const template = Template.fromStack(stack).toJSON();
 

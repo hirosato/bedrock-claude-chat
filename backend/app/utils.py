@@ -7,7 +7,7 @@ from app.repositories.model import MessageModel
 from botocore.client import Config
 from botocore.exceptions import ClientError
 
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-west-2")
 
 
 def is_running_on_lambda():

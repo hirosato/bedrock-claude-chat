@@ -30,7 +30,7 @@ Add your own instruction and give external knowledge as URL or files (a.k.a [RAG
 
 ## 🚀 Super-easy Deployment
 
-- On us-east-1 region, open [Bedrock Model access](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess) > `Manage model access` > Check `Anthropic / Claude`, `Anthropic / Claude Instant` and `Cohere / Embed Multilingual` then `Save changes`.
+- On us-west-2 region, open [Bedrock Model access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) > `Manage model access` > Check `Anthropic / Claude`, `Anthropic / Claude Instant` and `Cohere / Embed Multilingual` then `Save changes`.
 
 <details>
 <summary>Screenshot</summary>
@@ -137,10 +137,10 @@ npm ci
 npm i -g aws-cdk
 ```
 
-- Before deploying the CDK, you will need to work with Bootstrap once for the region you are deploying to. In this example, we will deploy to the us-east-1 region. Please replace your account id into `<account id>`.
+- Before deploying the CDK, you will need to work with Bootstrap once for the region you are deploying to. In this example, we will deploy to the us-west-2 region. Please replace your account id into `<account id>`.
 
 ```
-cdk bootstrap aws://<account id>/us-east-1
+cdk bootstrap aws://<account id>/us-west-2
 ```
 
 - If necessary, edit the following entries in [cdk.json](./cdk/cdk.json) if necessary.
@@ -192,7 +192,7 @@ EMBEDDING_CONFIG = {
 
 ### Remove resources
 
-If using cli and CDK, please `cdk destroy`. If not, access to [CloudFormation](https://console.aws.amazon.com/cloudformation/home) then delete `BedrockChatStack` and `FrontendWafStack` manually. Please note that `FrontendWafStack` is on `us-east-1` region.
+If using cli and CDK, please `cdk destroy`. If not, access to [CloudFormation](https://console.aws.amazon.com/cloudformation/home) then delete `BedrockChatStack` and `FrontendWafStack` manually. Please note that `FrontendWafStack` is on `us-west-2` region.
 
 ### Language Settings
 
